@@ -25,7 +25,7 @@ include_once("header.php");  ?>
             </div>
            
 			
-			  <h1> conteudo </h1>
+			  <h1> conteudo Home</h1>
 			
 
 
