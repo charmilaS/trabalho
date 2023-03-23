@@ -28,8 +28,6 @@ include_once("../header.php"); ?>
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Lista dos Usuarios</h4>
-                    <p class="card-description"> Add class <code>.table-{color}</code>
-                    </p>
                     <table class="table table-bordered">
                       <thead>
                         <tr>
