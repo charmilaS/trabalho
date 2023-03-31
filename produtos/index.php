@@ -30,36 +30,34 @@ include_once("../header.php"); ?>
 			<div class="col-lg-12 stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Lista dos Usuarios</h4>
+                    <h4 class="card-title">Lista de Produtos</h4>
                     <a href="users/add.php"><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Add Usuarios</button></a>
                     <table class="table table-bordered">
                       <thead>
                         <tr>
                           <th> # </th>
+                          <th> Codigo </th>
                           <th> Nome </th>
-                          <th> Contacto </th>
-                          <th> Email </th>
-                          <th> Username </th>
+                          <th> Preco </th>
                           <th> Acccao</th>
                         </tr>
                       </thead>
 
                       <?php
 
-                      $data = mysqli_query($connect, "SELECT * FROM users");
+                      $data = mysqli_query($connect, "SELECT * FROM produtos");
 
                       while($value = mysqli_fetch_array($data)) {
                         ?>
                       <tbody>
                         <tr class="table-info">
                           <td> <?php echo $value ['id'] ?> </td>
-                          <td> <?php echo $value ['name'] ?> </td>
-                          <td> <?php echo $value ['contact'] ?></td>
-                          <td> <?php echo $value ['email'] ?> </td>
-                          <td> <?php echo $value ['username'] ?></td>
+                          <td> <?php echo $value ['cod'] ?> </td>
+                          <td> <?php echo $value ['name'] ?></td>
+                          <td> <?php echo $value ['price'] ?> </td>
                           <td>
 							<a class="btn btn-sm btn-info " href="edit.php?id=<?php echo $value['id']; ?>">Editar </a> - 
-							<a class="btn btn-sm btn-danger " href="users/deleteQuery.php?id=<?php echo $value['id']; ?>" onclick="return confirma()"><i class="fas fa-trash"></i> Apagar</a>
+							<a class="btn btn-sm btn-danger " href="produtos/deleteQuery.php?id=<?php echo $value['id']; ?>" onclick="return confirma()"><i class="fas fa-trash"></i> Apagar</a>
 						  </td>
                           </td>
                           

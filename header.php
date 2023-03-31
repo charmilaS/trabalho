@@ -176,8 +176,8 @@ $base_url = 'http://localhost/aw/trabalho/';
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="menu-title">Mensagens</span>
+              <a class="nav-link" href="produtos/index.php">
+                <span class="menu-title">Produtos</span>
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
