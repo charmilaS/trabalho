@@ -31,7 +31,7 @@ include_once("../header.php"); ?>
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Lista de Produtos</h4>
-                    <a href="users/add.php"><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Add Usuarios</button></a>
+                    <a href="#"><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Add Usuarios</button></a>
                     <table class="table table-bordered">
                       <thead>
                         <tr>

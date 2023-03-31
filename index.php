@@ -26,9 +26,10 @@
           <div class="row flex-grow">
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
-                <div class="brand-logo">
-                  <img src="assets/images/logo.svg">
-                </div>
+              <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="home.php"> Products AW</a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
                 <h4>Hello! let's get started</h4>
                 <h6 class="font-weight-light">Sign in to continue.</h6>
                 <form action="home.php">                                                                                                                              
