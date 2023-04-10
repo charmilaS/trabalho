@@ -1,5 +1,15 @@
 <?php
-include_once("../header.php");  ?>
+include_once("../_db.php"); 
+include_once("../header.php");  
+
+	$id = $_GET['id'];
+	// faz a seleção do dados na Tabela	
+		$query = mysqli_query($connect, "SELECT * FROM produtos WHERE id = '$id' LIMIT 1");
+		$result = mysqli_fetch_assoc($query);
+		
+	
+
+?>
 
         <div class="main-panel">
           <div class="content-wrapper">
@@ -12,7 +22,7 @@ include_once("../header.php");  ?>
               <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white me-2">
                   <i class="mdi mdi-home"></i>
-                </span> Usuarios
+                </span>   Produtos
               </h3>
               <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
@@ -27,22 +37,23 @@ include_once("../header.php");  ?>
             <div class="col-12">
                 <div class="card">
                   <div class="card-body">
-                    <form  method="post" action="addQuery.php" class="form-sample">
+                    <form method="POST" action="produtos/editQuery.php"  class="form-sample">
+					<input type="hidden" name="id" value="<?php echo $result['id']; ?>">
                       <p class="card-description">  </p>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Codigo</label>
+                            <div class="col-sm-9">
+                              <input type="text" name = "cod" value="<?php echo $result['cod']; ?>" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Nome</label>
                             <div class="col-sm-9">
-                              <input type="text" name="name" class="form-control" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Contacto</label>
-                            <div class="col-sm-9">
-                              <input type="text" name="contact" class="form-control" />
+                              <input type="text" name = "name" value="<?php echo $result['name']; ?>" class="form-control" />
                             </div>
                           </div>
                         </div>
@@ -50,33 +61,21 @@ include_once("../header.php");  ?>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">email</label>
-                            <div class="col-sm-9">
-                            <input type="email" name="email" class="form-control" />
-                                
-                            </div>
+                            <label class="col-sm-3 col-form-label">Preco</label>
+							<input type="text" name = "price" value="<?php echo $result['price']; ?>"  class="form-control" />
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Username</label>
-                            <div class="col-sm-9">
-                            <input type="text" name="username" class="form-control" />
-                            </div>
-                          </div>
+                        
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Password</label>
-                            <div class="col-sm-9">
-                            <input type="password" name="password" class="form-control" />
-                            </div>
-                            </div>
-                          </div>
-                          <a href="users/index.php"><button type="button" class="btn btn-sm btn-primary"><i class="fa fa-arrow-left"></i> Enviar</button></a>
+                     
+					  <button type="submit" class="btn btn-sm btn-primary"> Editar</button>
+
+
+
                         </div>
+                      </div>
                     </form>
                   </div>
                 </div>

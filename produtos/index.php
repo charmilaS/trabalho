@@ -31,7 +31,7 @@ include_once("../header.php"); ?>
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Lista de Produtos</h4>
-                    <a href="#"><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Add Usuarios</button></a>
+                    <a href="produtos/add.php"><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Add Produtos</button></a>
                     <table class="table table-bordered">
                       <thead>
                         <tr>
@@ -56,7 +56,7 @@ include_once("../header.php"); ?>
                           <td> <?php echo $value ['name'] ?></td>
                           <td> <?php echo $value ['price'] ?> </td>
                           <td>
-							<a class="btn btn-sm btn-info " href="edit.php?id=<?php echo $value['id']; ?>">Editar </a> - 
+							<a class="btn btn-sm btn-info " href="produtos/edit.php?id=<?php echo $value['id']; ?>">Editar </a> - 
 							<a class="btn btn-sm btn-danger " href="produtos/deleteQuery.php?id=<?php echo $value['id']; ?>" onclick="return confirma()"><i class="fas fa-trash"></i> Apagar</a>
 						  </td>
                           </td>

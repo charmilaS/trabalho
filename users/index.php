@@ -58,7 +58,7 @@ include_once("../header.php"); ?>
                           <td> <?php echo $value ['email'] ?> </td>
                           <td> <?php echo $value ['username'] ?></td>
                           <td>
-							<a class="btn btn-sm btn-info " href="edit.php?id=<?php echo $value['id']; ?>">Editar </a> - 
+							<a class="btn btn-sm btn-info " href="users/edit.php?id=<?php echo $value['id']; ?>">Editar </a> - 
 							<a class="btn btn-sm btn-danger " href="users/deleteQuery.php?id=<?php echo $value['id']; ?>" onclick="return confirma()"><i class="fas fa-trash"></i> Apagar</a>
 						  </td>
                           </td>
