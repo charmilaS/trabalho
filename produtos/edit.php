@@ -62,7 +62,7 @@ include_once("../header.php");
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Preco</label>
-							<input type="text" name = "price" value="<?php echo $result['price']; ?>"  class="form-control" />
+							<input type="number" name = "price" value="<?php echo $result['price']; ?>"  class="form-control" />
                           </div>
                         </div>
                         <div class="col-md-6">
