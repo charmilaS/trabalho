@@ -27,7 +27,7 @@ include_once("../header.php");  ?>
             <div class="col-12">
                 <div class="card">
                   <div class="card-body">
-                    <form  method="post" action="addQuery.php" class="form-sample">
+                    <form  method="post" action="users/addQuery.php" class="form-sample">
                       <p class="card-description">  </p>
                       <div class="row">
                         <div class="col-md-6">
@@ -75,7 +75,7 @@ include_once("../header.php");  ?>
                             </div>
                             </div>
                           </div>
-                          <a href="users/index.php"><button type="button" class="btn btn-sm btn-primary"><i class="fa fa-arrow-left"></i> Enviar</button></a>
+                          <button type="submit" class="btn btn-sm btn-primary"> Salvar</button>
                         </div>
                     </form>
                   </div>

@@ -11,7 +11,7 @@
 		
 		$query = mysqli_query($connect,  "INSERT INTO users (name, contact, email, username, password) VALUES ('$name', '$contact', '$email', '$username', '$password')");
 		
-o
+		
 		header("location: addMsg.php");
 ?>
 

@@ -32,7 +32,7 @@ include_once("../header.php"); ?>
                   <div class="card-body">
                     <h4 class="card-title">Lista dos Usuarios</h4>
                     <a href="users/add.php"><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Add Usuarios</button></a>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" id="myTable">
                       <thead>
                         <tr>
                           <th> # </th>
@@ -61,7 +61,8 @@ include_once("../header.php"); ?>
 							<a class="btn btn-sm btn-info " href="users/edit.php?id=<?php echo $value['id']; ?>">Editar </a> - 
 							<a class="btn btn-sm btn-danger " href="users/deleteQuery.php?id=<?php echo $value['id']; ?>" onclick="return confirma()"><i class="fas fa-trash"></i> Apagar</a>
 						  </td>
-                          </td>
+              
+                          
                           
                         </tr>
                         <?php    }?>
@@ -74,7 +75,7 @@ include_once("../header.php"); ?>
 
 
 
-
+      
 
 
 

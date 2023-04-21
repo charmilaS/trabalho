@@ -26,6 +26,30 @@
     <!-- Custom js for this page -->
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/todolist.js"></script>
+
+    <!-- script jquery datable -->
+    <script src="assets/js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+      <script src="assets/js/jquery.dataTables.min.js"></script>
+   
+
+<script>
+  $(document).ready(function () {
+    $('#myTable').DataTable({
+  
+    
+        language: {
+            lengthMenu: 'Mostrar _MENU_ registros por pagina',
+            zeroRecords: 'Nenhum registro encontrado',
+            info: 'Mostrando _PAGE_ paginas de _PAGES_',
+            infoEmpty: 'Nenhum registro disponivel',
+            infoFiltered: '(Filtrado de _MAX_ registros)',
+            
+        },
+    });
+});
+</script>
+<!-- Fim do script jquery datable #mytable como id da tabela -->
     <!-- End custom js for this page -->
   </body>
 </html>
